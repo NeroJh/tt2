@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> formulario </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+
+        <main>
+            <b id="mensaje"></b>
+            
+            
+
+            <form class="formulario" id="formulario" method="post" action="#"> 
+
+                <h1> Formulario </h1>
+
+                <!--datos personales-->
+                <section class="campoFormulario campoDatos">
+
+                    <section class="campoFormulario" id="campo_nombre">
+                        <label for="nombre" class="formularioLabel"><b> Nombre Completo </b> </label>
+                        <section class="campoInput">
+                            <input type="string" class="formularioInput" name="nombreEstudiante" id="nombre" placeholder="Nombre completo" required>
+                            <i class="validacionEstado fas fa-times-circle"></i>
+                        </section>
+                        <p class="formularioInputError"> El nombre no acepta esos caracteres</p>
+                    </section>
+
+                    <section class="campoFormulario" id="campo_rut">
+                        <label for="rut" class="formularioLabel"> <b>Rut </b> </label>
+                        <section class="campoInput">
+                            <input type="string" class="formularioInput" name="rutEstudiante" id="rut" placeholder="00000000-0" maxlength="10" required>
+                            <i class="validacionEstado fas fa-times-circle"></i>
+                        </section>
+                        <p class="formularioInputError"> El rut solo puede contener numeros y un guion, rut ingresado no valido</p>
+                    </section>
+
+                    <section class="campoFormulario" id="campo_email">
+                        <label for="email" class="formularioLabel"> <b>Correo electronico </b></label>
+                        <section class="campoInput">
+                            <input type="email" class="formularioInput" name="emailEstudiante" id="email" placeholder="ejemplo@correo.com" required>
+                            <i class="validacionEstado fas fa-times-circle"></i>
+                        </section>
+                        <p class="formularioInputError">El correo ingresado no es valido</p>
+                    </section>
+
+                    <section class="campoFormulario" id="campo_telefono">
+                        <label for="telefono" class="formularioLabel"> <b> Teléfono Móvil </b> </label>
+                        <section class="campoInput">
+                            <input type="number" class="formularioInput" name="telefonoEstudiante" id="telefono" placeholder="012345678" required>
+                            <i class="validacionEstado fas fa-times-circle"></i>
+                        </section>
+                        <p class="formularioInputError"> El telefono solo puede contener numeros y debe contener 9 digitos</p>
+                    </section>
+
+                </section>
+
+                <!--lenguaje programacion-->
+
+                <div id="consulta"> <b>Seleccionar uno o más lenguajes de programación de un interés :</b></div>
+
+                <section class="campoFormulario campoLenguaje" id="campoLenguajeP">
+
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> Python
+                    </label>
+                    
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> TypeScript
+                    </label>
+
+                    <label class="formularioLabel">    
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> C++
+                    </label>  
+                    
+                    <label class="formularioLabel">  
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> C#
+                    </label> 
+                    
+                    <label class="formularioLabel"> 
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> PHP
+                    </label> 
+                    
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> Ruby on Rails
+                    </label>
+                    
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> Java
+                    </label>
+                    
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> R 
+                    </label>
+                    
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> Groovy
+                    </label>    
+
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> Go
+                    </label>
+                    
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> Swift
+                    </label>   
+                    
+                    <label class="formularioLabel">
+                        <input class="lenguajeProgramacion" type="checkbox" name="lenguaje" id="lenguaje"> Kotlin
+                    </label>
+                    
+                </section>
+
+                <!--nivel de programacion-->
+
+                <div  id="consulta"><b>Cuál es su nivel de experiencia en programación?</b></div>
+
+                <section class="campoFormulario campoNivel" id="campoNivelProg">
+
+                    <label class="formularioLabel" for="Alto">
+                        <input class="nivelProgramacion" type="radio" name="nivel" id="Alto"> Alto
+                    </label>
+
+                    <label class="formularioLabel" for="Medio">
+                        <input class="nivelProgramacion" type="radio" name="nivel" id="Medio"> Medio
+                    </label>
+
+                    <label class="formularioLabel" for="Bajo">
+                        <input class="nivelProgramacion" type="radio" name="nivel" id="Bajo"> Bajo
+                    </label>
+                    
+                </section>
+                
+                <!--nivel de conocimiento-->
+
+                <div  id="consulta"><b>Nivel de conocimiento sobre los siguientes lenguajes de programación :</b></div> 
+
+                <section class="campoFormulario" id="conocimientoLenguajeP">
+                    
+                    <label class="formularioLabel">
+                        Python
+                        <input class="conocimientoLenguaje" type="range" name="conoc" id="Python">
+                    </label>
+                    
+                    <label class="formularioLabel">
+                        Java
+                        <input class="conocimientoLenguaje" type="range" name="conoc" id="Java">
+                    </label>
+
+                    <label class="formularioLabel">
+                        C++
+                        <input class="conocimientoLenguaje" type="range" name="conoc" id="C++">
+                    </label>
+
+                </section>
+
+                <!--Curso que mas le costo-->
+
+                <div  id="consulta"><b>Seleccione cuál de los siguientes cursos les ha tomado mayor dificultad :</b></div>
+
+                <section class="campoFormulario campoDif" id="campoDificultaad">
+
+                    <label class="formularioLabel">
+                        <input class="ramoMasDificil" type="checkbox" name="masDificil" id="masDificil"> Estructura de Datos
+                    </label>
+                    
+                    <label class="formularioLabel">
+                        <input class="ramoMasDificil" type="checkbox" name="masDificil" id="masDificil"> Inteligencia Artificial
+                    </label>    
+
+                    <label class="formularioLabel">
+                        <input class="ramoMasDificil" type="checkbox" name="masDificil" id="masDificil"> Interacción Humano-Computador
+                    </label>
+                    
+                    <label class="formularioLabel">
+                        <input class="ramoMasDificil" type="checkbox" name="masDificil" id="masDificil"> Sistemas Operativos
+                    </label>   
+                    
+                    <label class="formularioLabel">
+                        <input class="ramoMasDificil" type="checkbox" name="masDificil" id="otro"> Otro
+                    </label>
+
+                </section>
+
+                <!--Opinion acerca de la escuela-->
+
+                <div id="consulta"><b>Queremos conocer su opinión acerca de la escuela :</b></div>
+
+                <section class="campoFormulario campoOp" id="campoOpinion">
+                    <label for="opinio" class="formularioLabel">
+                        <textarea class="texto" id="opinion" name="opinion" maxlength="400"></textarea>
+                    </label>
+
+                </section>
+
+                <!--enviar/cancelar formulario-->
+
+                <section class="campoEnviarCancelar">
+
+                    <section class="campoFormulario campoEnviar" id="enviarFormulario">
+                        <button type="sumbit" id="enviar"> Enviar </button>
+                    </section>
+
+                    <section class="campoFormulario campoCancelar" id="cancelarFormulario">
+                        <button type="submit" id="cancelar"> Cancelar </button>
+                    </section>
+
+                </section>
+
+                <!--Mensaje error formulario-->
+                <section class="formularioMensaje" id="formularioMensaje">
+
+                    <p><i class="fas fa-exclamation-triangle"> <b>Error :</b> Porfavor rellene todos los campos y revise que esten correctamente agregados </i></p>
+
+                </section>
+            </form>
+        </main>
+
+        <script src="js/app.js" async defer></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    </body>
+</html>

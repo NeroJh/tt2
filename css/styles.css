@@ -1,0 +1,170 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #a1a1a1;
+}
+
+main {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  padding: 40px;
+  background: #cecece;
+}
+
+.formulario {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+}
+
+.formularioLabel {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.campoInput {
+  position: relative;
+}
+
+.formularioInput {
+  width: 90%;
+  margin: 10px;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 1 40px 0 10px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.formularioInput:focus {
+  border: 3px solid rgba(3, 91, 224, 0.548);
+  outline: none;
+  -webkit-box-shadow: 2px 0px 30px #3d7d9b;
+          box-shadow: 2px 0px 30px #3d7d9b;
+}
+
+.formularioInputError {
+  font-size: 14px;
+  margin-left: 18px;
+  color: #d31d1d;
+  margin-bottom: 0;
+  display: none;
+}
+
+.formularioInputError-activo {
+  display: block;
+}
+
+.validacionEstado {
+  position: absolute;
+  right: 38px;
+  bottom: 28px;
+  z-index: 100;
+  font-size: 20px;
+  opacity: 0;
+}
+
+.formularioMensaje {
+  height: 40px;
+  line-height: 40px;
+  background: rgba(151, 21, 21, 0.753);
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+}
+
+.formularioMensaje-activo {
+  display: block;
+}
+
+.formularioMensaje p {
+  margin: 0;
+  padding: 5px;
+}
+
+.lenguajeProgramacion {
+  margin-left: 30px;
+}
+
+.nivelProgramacion {
+  margin-left: 30px;
+}
+
+.conocimientoLenguaje {
+  margin-left: 30px;
+}
+
+.campoDatos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.campoLenguaje {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.campoNivel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.campoDif {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.campoEnviarCancelar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 20px;
+}
+
+.texto {
+  width: 100%;
+}
+
+#consulta {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.formularioCampoCorrecto .validacionEstado {
+  color: #51c051;
+  opacity: 1;
+}
+
+.formularioCampoIncorrecto .formularioLabel {
+  color: #be4646;
+}
+
+.formularioCampoIncorrecto .formularioInput {
+  border: 3px solid #be4646;
+}
+
+.formularioCampoIncorrecto .validacionEstado {
+  color: #be4646;
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .formulario {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,157 @@
+@import 'base/variables';
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: $fondoPagina;
+}
+
+main {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+    background: $fondo;
+}
+
+.formulario{
+	display: grid;
+	gap: $margenPequenio;
+}
+
+.formularioLabel{
+	display: block;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.campoInput{
+	position: relative;
+}
+
+.formularioInput{
+	width: 90%;
+	margin: 10px;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 1 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formularioInput:focus {
+	border: 3px solid $azul;
+	outline: none;
+	box-shadow: 2px 0px 30px $borde;
+}
+
+.formularioInputError{
+	font-size: 14px;
+	margin-left: 18px;
+	color: rgb(211, 29, 29);
+	margin-bottom: 0;
+	display: none;
+}
+
+.formularioInputError-activo{
+	display: block;
+}
+
+.validacionEstado{
+	position: absolute;
+	right: 38px;
+	bottom: 28px;
+	z-index: 100;
+	font-size: 20px;
+	opacity: 0;
+}
+
+.formularioMensaje{
+	height: 40px;
+	line-height: 40px;
+	background: $error;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formularioMensaje-activo{
+	display: block;
+}
+
+.formularioMensaje p{
+	margin: 0;
+	padding: 5px;
+}
+
+.lenguajeProgramacion{
+	margin-left: 30px;
+}
+
+.nivelProgramacion{
+	margin-left: 30px;
+}
+
+.conocimientoLenguaje{
+	margin-left: 30px;
+}
+
+.campoDatos{
+    display: grid;
+    grid-template-columns: $dosColumnas;
+}
+
+.campoLenguaje{
+	display: grid;
+    grid-template-columns: $dosColumnas;
+}
+
+.campoNivel{
+	display: grid;
+    grid-template-columns: $tresColumnas;
+}
+
+.campoDif{
+	display: grid;
+    grid-template-columns: $unaColumna;
+}
+
+.campoEnviarCancelar{
+	display: grid;
+    grid-template-columns: $dosColumnas;
+	margin: $margenPequenio;
+}
+
+.texto{
+	width: 100%;
+}
+
+#consulta{
+	margin-top: $margenPequenio;
+	margin-bottom: $margenPequenio;
+	margin-left: 10px;
+}
+
+.formularioCampoCorrecto .validacionEstado{
+	color: rgb(81, 192, 81);
+	opacity: 1;
+}
+
+.formularioCampoIncorrecto .formularioLabel{
+	color: rgb(190, 70, 70);
+}
+
+.formularioCampoIncorrecto .formularioInput{
+	border: 3px solid rgb(190, 70, 70);
+}
+
+.formularioCampoIncorrecto .validacionEstado{
+	color: rgb(190, 70, 70);
+	opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+	.formulario{
+		grid-template-columns: $unaColumna;
+	}
+}
